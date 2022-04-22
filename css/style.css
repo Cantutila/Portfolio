@@ -1,0 +1,321 @@
+/* HACKS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+/* BACKGROUND IMAGES */
+.img-1 {
+    background-image: url(../img/1.jpg);
+}
+.img-2 {
+    background-image: url(../img/2.jpg);
+}
+.img-3 {
+    background-image: url(../img/3.jpg);
+}
+
+/* GENERIC */
+body {
+    font-family: 'Caveat', cursive;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+a {
+    text-decoration: noneblack;
+    color: currentColor;
+}
+
+a:hover {
+    color: rgb(134, 133, 133);
+}
+
+h1{
+    font-family: "Oswald", sans-serif;
+}
+
+/* INDEX */
+.main {
+    display: flex;
+    text-align: center;
+    background: rgba(28, 28, 28, 0.7);
+}
+.main__content {
+    margin: auto;
+}
+.main__title {
+    font-size: 3.5rem;
+}
+.main__subtitle {
+    font-size: 2.4rem;
+}
+.main__description {
+    font-size: 2.3rem;
+    font-family: 'Russo One', sans-serif;
+}
+
+.info {
+    display: flex;
+    text-align: center;
+    background: rgba(28, 28, 28, 0.8);
+    padding: 1rem;
+}
+.info__content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.info__content h3 {
+    font-size: 1.4rem;
+}
+.info__content p {
+    font-size: 1.9rem;
+}
+i {
+    margin: 0rem 0.4rem;
+}
+
+#information-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+#information {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 1.5rem;
+    background: rgba(28, 28, 28, 0.5);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    animation: info-out 1s 4s ease forwards;
+}
+.display-none {
+    display: none;
+}
+
+@keyframes info-out {
+    100% {
+        opacity: 0;
+    }
+}
+
+/* VERTICAL */
+@media (max-aspect-ratio: 1/1) {
+    .main {
+        height: 30vh;
+    }
+
+    .info {
+        height: 70vh;
+    }
+
+    @media (min-height: 600px){
+        .main__title {
+            font-size: 4.1rem;
+        }
+        .main__subtitle {
+            font-size: 2.8rem;
+        }
+        .main__description {
+            font-size: 2.6rem;
+        }
+
+        .info {
+            padding-bottom: 2rem;
+        }
+        .info__content h3 {
+            font-size: 2rem;
+        }
+        .info__content p {
+            font-size: 2.7rem;
+        }
+    }
+
+    @media (min-width: 600px){
+        .main__title {
+            font-size: 5rem;
+        }
+        .main__subtitle {
+            font-size: 3.3rem;
+        }
+        .main__description {
+            font-size: 3.1rem;
+        }
+
+        i {
+            margin: 0rem 1rem;
+        }
+
+        #information-button {
+            font-size: 2rem;
+        }
+    }
+
+    @media (min-width: 768px){
+        .main__title {
+            font-size: 6rem;
+        }
+        .main__subtitle {
+            font-size: 4rem;
+        }
+        .main__description {
+            font-size: 3.7rem;
+        }
+
+        .info__content h3 {
+            font-size: 2.6rem;
+        }
+        .info__content p {
+            font-size: 3.8rem;
+        }
+        i {
+            margin: 0rem 1.2rem;
+        }
+    }
+
+    @media (min-width: 1024px){
+        .main__title {
+            font-size: 7.5rem;
+        }
+        .main__subtitle {
+            font-size: 5rem;
+        }
+        .main__description {
+            font-size: 4.6rem;
+        }
+
+        .info__content h3 {
+            font-size: 3rem;
+        }
+        .info__content p {
+            font-size: 4.5rem;
+        }
+        i {
+            margin: 0rem 1.5rem;
+        }
+    }
+}
+
+
+/* HORIZONTAL */
+@media (min-aspect-ratio: 1/1) {
+    .front {
+        display: grid;
+        grid-template-areas: "main info";
+    }
+
+    .main {
+        grid-area: main;
+        width: 40vw;
+        height: 100vh;
+    }
+
+    .info {
+        grid-area: info;
+        width: 60vw;
+        height: 100vh;
+    }
+
+    #information {
+        max-width: calc(40vw - 1rem);
+    }
+
+    @media (min-height: 600px){        
+        .info {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .main__title {
+            font-size: 5.5rem;
+        }
+        .main__subtitle {
+            font-size: 3.7rem;
+        }
+        .main__description {
+            font-size: 3.4rem;
+        }
+
+        .info__content h3 {
+            font-size: 2.2rem;
+        }
+        .info__content p {
+            font-size: 3.5rem;
+        }
+        i {
+            margin: 0rem 1rem;
+        }
+
+        #information-button {
+            font-size: 2rem;
+        }
+    }
+
+    @media (min-height: 768px){        
+        .main__title {
+            font-size: 6.1rem;
+        }
+        .main__subtitle {
+            font-size: 4.1rem;
+        }
+        .main__description {
+            font-size: 3.8rem;
+        }
+
+        .info__content h3 {
+            font-size: 2.8rem;
+        }
+        .info__content p {
+            font-size: 4rem;
+        }
+
+        i {
+            margin: 0rem 1.2rem;
+        }
+    }
+
+    @media (min-height: 1024px){        
+        .main__title {
+            font-size: 8rem;
+        }
+        .main__subtitle {
+            font-size: 5.4rem;
+        }
+        .main__description {
+            font-size: 5rem;
+        }
+
+        .info__content h3 {
+            font-size: 4rem;
+        }
+        .info__content p {
+            font-size: 5rem;
+        }
+
+        i {
+            margin: 0rem 1.5rem;
+        }
+    }
+}
